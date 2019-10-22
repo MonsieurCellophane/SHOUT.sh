@@ -80,12 +80,18 @@ This prompted me to tweet along the lines of:
 
 Which provoked a fruitful tweet exchange (which I did not know was at all possible) viz. https://twitter.com/saruspete/status/1149281131612770304.
 
-It's been sitting in my .bashrc for a few months, with no issues (but I do not use it heavily, see below).
+It's been sitting in my .bashrc for a few months, with no issues. I do not use it heavily though, because I do SU - a lot.
 
-I omitted the `alias SUDO='sudo $(history -p !!)'` thing, because:
+I omitted the `alias SUDO='sudo $(history -p !!)'` thing because  I introduced a shorter, more useful shortcut that maps  ^V to "recall last command go to BOL, upcase first word". 
+This is  actually better than an alis because 
 
-  * I was not going to  test/investigate the ups and downs of interacting with history expansion, which I hate and mostly eschew;
-  * I do SUDO su - a lot.
+  * it's shorter 
+  * It allows you to back off before hitting CR. With 'sudo !!' it's
+    easy to shoot your own foot especially if you (like me) are
+    merging different histories from different terminal windows. (This
+    can be achieved with: 
+	`PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"`. 
+	It's far from flawless, though)
 
 
 ## LICENSE
