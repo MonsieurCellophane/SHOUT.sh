@@ -47,4 +47,7 @@ function command_not_found_handle {
 }
 # avoid loops
 export ALF_CMNFH=1
+# Useful shortcut maps  ^V to  up-arrow^A<esc>u^E, ie recall last command go to BOL, upcase first word.
+# better than the alias S=sudo !!, as it allows you to back off before hitting CR.
+bind '"\C-v": "\e[A\C-a\eu\C-e"'
 # SHOUT.sh ends
