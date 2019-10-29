@@ -15,7 +15,7 @@
 #    foo_orig
 # }
 #
-# Using it makes fell somewhat unclean, though.
+# Using it makes me feel somewhat unclean, though.
 #
 if [[ x$ALF_CMNFH == x ]]; then
     # check pre-existing handler
